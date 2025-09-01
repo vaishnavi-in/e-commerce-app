@@ -34,7 +34,27 @@ a:hover {
 
 body {
   padding: 40px;
-  display: flex;
+}
+
+.header {
+  float: right;
+  position: relative;
+}
+
+.header img {
+  cursor: pointer;
+}
+
+.cartItems {
+  position: absolute;
+  bottom: 60%;
+  left: 50%;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  width: 20px;
+  text-align: center;
 }
 
 @media (prefers-color-scheme: light) {

@@ -1,20 +1,25 @@
 import {useEffect} from 'react'
-import {setProducts} from '../../store/productSlice'
+import {setProducts, addToCart} from '../../store/productSlice'
 import {useSelector, useDispatch} from 'react-redux'
 import {fetchProducts} from '../../services/products'
 import './ProductsList.css'
 
 const ProductsList = () => {
   const productList = useSelector((state) => state.product.productsList)
+
   const dispatch = useDispatch()
   useEffect(() => {
     const getProducts = async () => {
       const products = await fetchProducts()
-      console.log(products)
       dispatch(setProducts(products))
     }
     getProducts()
   }, [])
+
+  const handleAddToCartClick = (id) => {
+    dispatch(addToCart(id))
+  }
+
   return (
     <div className='listContainer'>
       {productList.map((product) => {
@@ -31,6 +36,7 @@ const ProductsList = () => {
               <div>{product.description}</div>
               <div>Price: ${product.price}</div>
             </div>
+            <button type='button' onClick={() => handleAddToCartClick(product.id)}>Add to cart</button>
           </li>
         )
       })}
