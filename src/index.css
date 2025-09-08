@@ -13,10 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-nav {
-  margin-bottom: 20px;
-}
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -32,13 +28,24 @@ a:hover {
   color: rgb(70, 70, 152);
 }
 
-body {
+main {
   padding: 40px;
+  padding-bottom: 40px;
+  min-height: 77vh;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 30px;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 12px lightgray;
+  border-radius: 5px;
 }
 
 .header {
-  float: right;
-  position: relative;
+  position: absolute;
+  right: 5%;
 }
 
 .header img {
@@ -47,14 +54,21 @@ body {
 
 .cartItems {
   position: absolute;
-  bottom: 60%;
-  left: 50%;
-  background-color: black;
-  color: white;
-  padding: 10px;
+  bottom: 55%;
+  left: 35%;
+  padding: 7px;
   border-radius: 50%;
   width: 20px;
+  height: 20px;
   text-align: center;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
 }
 
 @media (prefers-color-scheme: light) {

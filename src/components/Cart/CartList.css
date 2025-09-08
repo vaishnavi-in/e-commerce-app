@@ -9,6 +9,7 @@
 .cartItem {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
+    grid-gap: 10px;
     margin-bottom: 16px;
 }
 

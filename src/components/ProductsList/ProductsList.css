@@ -6,6 +6,13 @@ li {
   list-style: none;
 }
 
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+  align-items: center;
+}
+
 .productContainer {
   display: grid;
   grid-template-columns: 0.5fr 9fr 1fr;
@@ -29,4 +36,8 @@ li {
 
 .productContainer button:hover {
   background-color: rgb(233, 238, 240);
+}
+
+.noData {
+  text-align: center;
 }
